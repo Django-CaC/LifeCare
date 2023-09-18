@@ -19,7 +19,7 @@
       <a href="#" class="appointment-btn scrollto">Mi Perfil</a>
       <a href="#" class="appointment-btn scrollto">Cerrar Sesion</a>
       {% else %}
-      <a href="#" class="appointment-btn scrollto">Iniciar Sesion</a>
+      <a href="{% url 'login' %}" class="appointment-btn scrollto">Iniciar Sesion</a>
       <a href="#" class="appointment-btn scrollto">Registrarse</a>
       {% endif %}
       {% endblock %}
