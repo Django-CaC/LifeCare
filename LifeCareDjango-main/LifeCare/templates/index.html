@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>LifeCare</title>
+
+	<link rel="shortcut icon" href="{% static 'img/favicon1.ico' %}" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/carrusel2.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/calendario3.css' %}">
+
+	<!-- Google Font Link for Icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<script src="{% static 'js/calendario3.js' %}" defer></script>
+</head>
+<body>
+	<main class="content">
+		<header>
+			<nav>
+				<ul class="nav-items">
+					<li><a href="http://localhost:8000/index/">Home</a></li>
+					<li><a href="#">Turnos</a></li>
+					<li><a href="http://localhost:8000/faqs/">FAQs</a></li>
+					<li><a href="#">Acerca de...</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Bienvenidos a LifeCare</h1>
+			<h2>Centro Médico Asistencial</h2>
+			<section class="slider-frame">
+				<ul>
+					<li><img src="{% static 'img/lifecare1.png' %}" alt="lifecare1"></li>
+					<li><img src="{% static 'img/lifecare2.png' %}" alt="lifecare2"></li>
+					<li><img src="{% static 'img/lifecare3.png' %}" alt="lifecare3"></li>
+					<li><img src="{% static 'img/lifecare4.png' %}" alt="lifecare4"></li>
+				</ul>
+			</section>
+		</section>
+
+		<section>
+			<h1>Reserva de Turnos</h1>
+			<div>
+				<ol>
+					<li>Elija la fecha para hacer la reserva del turno.</li>
+					<li>Indique qué tipo de turno necesita reservar.</li>
+					<li>Complete el formulario con sus datos y listo.</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="wrapper">
+			<header>
+				<p class="current-date">Septiembre 2023</p>
+				<section class="icons">
+					<span id="prev" class="material-symbols-outlined">chevron_left</span>
+					<span id="next" class="material-symbols-outlined">chevron_right</span>
+				</section>
+			</header>
+			<section class="calendar">
+				<ul class="weeks">
+					<li>Dom</li>
+					<li>Lun</li>
+					<li>Mar</li>
+					<li>Mié</li>
+					<li>Jue</li>
+					<li>Vie</li>
+					<li>Sáb</li>
+				</ul>
+				<ul class="days"></ul>
+			</section>
+		</section>
+	</main>
+</body>
+</html>
