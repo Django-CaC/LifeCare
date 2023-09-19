@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block extra_css%}
+  <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+{%endblock%}
+
+  <title>{% block title %} Inicio Sesion {% endblock %}</title>
+
+        {% block navbar %}
+          <li><a class="nav-link scrollto active" href="#">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+          <li><a class="nav-link scrollto" href="#services">Especialidades</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+        {% endblock %}
+
+      {% block button %}
+      <a href="#" class="appointment-btn scrollto">Registrarse</a>
+      {% endblock %}
+
+      {% block content %}
+          <div>
+            <h1>Bienvenido a {{usuario_activo}}LifeCare</h1>
+          </div>
+
+      {% endblock %}

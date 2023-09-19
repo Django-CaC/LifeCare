@@ -1,8 +1,9 @@
 {% extends "core/base.html" %}
+
 {% load static %}
 
 {% block extra_css%}
-  <link rel="stylesheet" href="{% static '/css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
 {%endblock%}
 
   <title>{% block title %} Home {% endblock %}</title>
@@ -20,7 +21,7 @@
       <a href="#" class="appointment-btn scrollto">Cerrar Sesion</a>
       {% else %}
       <a href="{% url 'login' %}" class="appointment-btn scrollto">Iniciar Sesion</a>
-      <a href="#" class="appointment-btn scrollto">Registrarse</a>
+      <a href="" class="appointment-btn scrollto">Registrarse</a>
       {% endif %}
       {% endblock %}
 
@@ -43,7 +44,7 @@
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>¿Por qué elegir LifeCara?</h3>
+              <h3>¿Por qué elegir LifeCare?</h3>
               <p>
                 Aquí podrás encontrar tu turno sin moverte de tu casa.
                 A cualquier hora, cualquier día y desde cualquier lugar
