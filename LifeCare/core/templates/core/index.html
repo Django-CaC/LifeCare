@@ -6,7 +6,12 @@
   <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
 {%endblock%}
 
-  <title>{% block title %} Home {% endblock %}</title>
+  {% block title %}
+    {% filter upper %}
+        Home
+    {% endfilter %}
+  {% endblock %}
+
 
         {% block navbar %}
           <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
