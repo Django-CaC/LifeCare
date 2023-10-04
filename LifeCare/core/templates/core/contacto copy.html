@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block extra_css%}
+  <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+{%endblock%}
+
+{% block title %}Envianos tus comentarios{% endblock %}
+
+{% block navbar %}
+    <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+    <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+    <li><a class="nav-link scrollto" href="#services">Especialidades</a></li>
+    <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+    <li><a class="nav-link scrollto" href="{% url 'contacto' %}">Contactactanos</a></li>
+{% endblock %}
+        
+{% block button %}
+    {% if request.user.is_authenticated %}
+      <a href="#" class="appointment-btn scrollto">Mi Perfil</a>
+      <a href="#" class="appointment-btn scrollto">Cerrar Sesion</a>
+    {% else %}
+      <a href="{% url 'login' %}" class="appointment-btn scrollto">Iniciar Sesion</a>
+      <a href="" class="appointment-btn scrollto">Registrarse</a>
+    {% endif %}
+    {% endblock %}
+   
+{% block content %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container">
+        <form action="">
+            {% csrf_token %}
+            {{ contacto_form.as_p }}
+        <input type="submit">
+     </form>
+    </div>
+</section><!-- End Hero -->
+
+{% endblock %}
