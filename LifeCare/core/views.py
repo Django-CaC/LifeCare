@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import ContactoForm
+from .models import Persona
 
 # Create your views here.
 def index(request):
@@ -20,6 +21,10 @@ def contacto(request):
             #Dar de alta la info
             
             messages.info(request, 'Consulta enviada con éxito')
+            
+            #Agregar los campos para dar de alta en la BBDD
+            
+                        
             return redirect(reverse('index'))
              
     else: #GET
